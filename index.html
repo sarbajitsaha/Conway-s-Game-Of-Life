@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Game Of Life</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/game_of_life.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Game Of Life</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+
+    <div class="container">
+        <a class="github-fork-ribbon" href="http://url.to-your.repo" title="Fork on GitHub">Fork on GitHub</a>
+        <p id="title">Conway's Game of Life</p>
+        <p id="details"></p>
+        <div class="text-center">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" id="start" class="btn btn-default">Start</button>
+                <button type="button" id="random" class="btn btn-default">Randomise</button>
+                <button type="button" id="reset" class="btn btn-default">Reset</button>
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+        <div id="about">
+            <div>
+				<p>
+					<a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" title="Conway's Game of Life" style="display:block;">Conway's Game of Life</a>
+					<span>4 Axioms to Conway's Game of Life</span>
+				</p>
+				<ol>
+					<li>Any live cell with fewer than two live neighbors dies, as if caused by under-population.</li>
+					<li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+					<li>Any live cell with more than three live neighbors dies, as if by overcrowding.</li>
+					<li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+				</ol>
+				<p>
+					Please refer to the <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" title="Conway's Game of Life">wikipedia link</a> to see what this is all about. There is a lot to it, and it has interesting implications
+					to evolution, biological life, and mathematics. But... simply click on 'Randomise' and 'Start' to begin the simulation.
+					Some patterns do more interesting things than others. The wikipedia page will tell you about them if you don't want to hunt. Code available on <a href="https://github.com/mycrazydream/conways_life" target="_blank">GitHib</a>, 
+					or just view the source.
+				</p>
+			</div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
