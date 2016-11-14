@@ -17,7 +17,7 @@ var start = false;
 PatternEnum = {
     RPENTOMINO: 0,
     GLIDER: 1,
-    NOAH_ARK: 2,
+    ACORN: 2,
 }
 
 function fillCanvas(){
@@ -100,9 +100,9 @@ $(document).ready(function(){
         var str = "Iteration: " + iteration + "     Population: " + population;
         $("#details").text(str);
     });
-    $("#noah").click(function(){
+    $("#acorn").click(function(){
         initialise(rows, columns, life_arr, temp_arr);
-        patternInitialise(rows, columns, life_arr, PatternEnum.NOAH_ARK);
+        patternInitialise(rows, columns, life_arr, PatternEnum.ACORN);
         fillCanvas();
         seconds = 300;
         var population = checkPopulation(rows, columns, life_arr);

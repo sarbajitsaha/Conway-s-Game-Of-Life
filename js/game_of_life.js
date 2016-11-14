@@ -107,7 +107,7 @@ function patternInitialise(r,c, life_arr, choice){
             life_arr[i-1][j-1] = true;
             break;
         case 2:
-            //noah's ark
+            //acorn
             i = 20;
             j = 40;
             for( var k=1;k<=7;k++){
