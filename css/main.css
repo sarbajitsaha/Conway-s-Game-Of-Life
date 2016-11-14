@@ -10,10 +10,14 @@ body{
 }
 
 #btn-main{
-    padding-bottom: 10px;
+    padding: 10px;
     widows: 80px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#pattern_title{
+    padding-top: 10px;
 }
 
 #about{

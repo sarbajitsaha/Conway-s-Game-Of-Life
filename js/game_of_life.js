@@ -83,3 +83,20 @@ function initialise(r, c, life_arr, temp_arr){
         }
     }
 }
+
+function patternInitialise(r,c, life_arr, choice){
+    switch (choice) {
+        case 0:
+            //R pentomino
+            i = 20;
+            j = 40;
+            life_arr[i][j] = true;
+            life_arr[i][j-1] = true;
+            life_arr[i][j+1] = true;
+            life_arr[i-1][j] = true;
+            life_arr[i+1][j+1] = true;
+            break;
+        default:
+
+    }
+}

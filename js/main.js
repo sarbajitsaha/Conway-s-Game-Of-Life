@@ -14,6 +14,11 @@ var seconds = 800;
 var iteration = 0;
 var start = false;
 
+PatternEnum = {
+    RPENTOMINO: 0,
+
+}
+
 function fillCanvas(){
     var c=document.getElementById("canvas");
     var ctx=c.getContext("2d");
@@ -76,7 +81,7 @@ $(document).ready(function(){
     ctx.canvas.width = canvas_width;
     ctx.canvas.height = canvas_height;
     fillCanvas();
-    
+
     $("#reset").click(function(){
         iteration = 0;
         initialise(rows, columns, life_arr, temp_arr);
@@ -93,6 +98,14 @@ $(document).ready(function(){
         var str = "Iteration: " + iteration + "     Population: " + population;
         $("#details").text(str);
     });
+    $("#pentomino").click(function(){
+        initialise(rows, columns, life_arr, temp_arr);
+        patternInitialise(rows, columns, life_arr, PatternEnum.RPENTOMINO);
+        fillCanvas();
+        var population = checkPopulation(rows, columns, life_arr);
+        var str = "Iteration: " + iteration + "     Population: " + population;
+        $("#details").text(str);
+    });
     $("#start").click(function(){
         if(start===false){
             start = true;
@@ -103,5 +116,5 @@ $(document).ready(function(){
             $("#start").text("Start");
         }
     });
-        
+
 });
