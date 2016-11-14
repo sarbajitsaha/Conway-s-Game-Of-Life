@@ -96,6 +96,28 @@ function patternInitialise(r,c, life_arr, choice){
             life_arr[i-1][j] = true;
             life_arr[i+1][j+1] = true;
             break;
+        case 1:
+            //glider
+            i = 35;
+            j = 5;
+            life_arr[i+1][j] = true;
+            life_arr[i][j+1] = true;
+            life_arr[i-1][j] = true;
+            life_arr[i-1][j+1] = true;
+            life_arr[i-1][j-1] = true;
+            break;
+        case 2:
+            //noah's ark
+            i = 20;
+            j = 40;
+            for( var k=1;k<=7;k++){
+                if(k!=3 && k!=4){
+                    life_arr[i+3][k+j] = true;
+                }
+            }
+            life_arr[i+2][j+4] = true;
+            life_arr[i+1][j+2] = true;
+            break;
         default:
 
     }

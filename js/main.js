@@ -16,7 +16,8 @@ var start = false;
 
 PatternEnum = {
     RPENTOMINO: 0,
-
+    GLIDER: 1,
+    NOAH_ARK: 2,
 }
 
 function fillCanvas(){
@@ -94,6 +95,16 @@ $(document).ready(function(){
         initialise(rows, columns, life_arr, temp_arr);
         randomInitialise(rows, columns, life_arr, Math.floor(Math.random()*3000));
         fillCanvas();
+        seconds = 800;
+        var population = checkPopulation(rows, columns, life_arr);
+        var str = "Iteration: " + iteration + "     Population: " + population;
+        $("#details").text(str);
+    });
+    $("#noah").click(function(){
+        initialise(rows, columns, life_arr, temp_arr);
+        patternInitialise(rows, columns, life_arr, PatternEnum.NOAH_ARK);
+        fillCanvas();
+        seconds = 300;
         var population = checkPopulation(rows, columns, life_arr);
         var str = "Iteration: " + iteration + "     Population: " + population;
         $("#details").text(str);
@@ -101,6 +112,16 @@ $(document).ready(function(){
     $("#pentomino").click(function(){
         initialise(rows, columns, life_arr, temp_arr);
         patternInitialise(rows, columns, life_arr, PatternEnum.RPENTOMINO);
+        fillCanvas();
+        seconds = 500;
+        var population = checkPopulation(rows, columns, life_arr);
+        var str = "Iteration: " + iteration + "     Population: " + population;
+        $("#details").text(str);
+    });
+    $("#glider").click(function(){
+        initialise(rows, columns, life_arr, temp_arr);
+        patternInitialise(rows, columns, life_arr, PatternEnum.GLIDER);
+        seconds = 300;
         fillCanvas();
         var population = checkPopulation(rows, columns, life_arr);
         var str = "Iteration: " + iteration + "     Population: " + population;
